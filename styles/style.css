@@ -148,6 +148,7 @@
   .todo-list {
     min-width: 40%;
     list-style: none;
+    padding-top: 36px;
   }
   .todo {
     margin: 0.5rem;
@@ -284,29 +285,16 @@
     font-size: 1.2rem;
     font-weight: 700;
   }
-  
-  .start{
-    color: #1f3;
+ 
+  #Note > div.ql-toolbar.ql-snow{
+    padding-top: 200px;
   }
-  .stop{
-    color: #E00;
+
+  #editor{
+    background-color: white;
+    margin: 20px 120px;
   }
-  
-  #continue, .stop, #start{
-    display: none;
-  }
-  
-  #seconds{
-    width: 250px;
-    background: none;
-    outline: none;
-    border: none;
-    border-bottom: 4px solid #fff;
-    padding: 1rem;
-    font-size: 2rem;
-    color: white;
-  }
-  
-  #seconds::placeholder{
-    color: #ddd;
+
+  #Todo > form{
+    padding-top: 200px;
   }
