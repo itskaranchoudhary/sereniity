@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <title>Sereniity</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    
+<body>
+    <div class="main-section">
+        <div class="header-section" style="  text-align: center;">
+            <div class="logo-holder" style="float: left;">
+                <img src="./assets/images/logo.png" alt="logo" style="width: 180px; margin:24px; margin-left:110px;">
+            </div>
+            <div style="float:right; border-radius: 10px; border: 2px solid black; padding: 16px; font-size: 21px; margin: 24px;
+            margin-right: 70px;padding-right:20px; padding-left:20px ;">
+                <span class="github-link"><i class='bx bxl-github'></i> Contribute</span>
+            </div>
+        </div>
+        <div id="Home" class=" tab">
+
+            <div class="sounds-div">
+                <ul class="sounds-list">
+                    <li class="play-rain">
+                        <a href="javascript:playSound('rain')" style="width: 100%;">
+                            <div> 
+                                <span>Rain</span><br>
+                                <img src="./assets/images/rain.svg" alt="rain">   
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pause-rain" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('rain')">
+                            <div >
+                                <span>Rain</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-campfire">
+                        <a href="javascript:playSound('campfire')">                                               
+                            <div> 
+                                <span>Campfire</span><br> 
+                                <img src="./assets/images/campfire.svg" alt="campfire">
+                            </div>
+                        </a>
+                    </li> 
+                    <li class="pause-campfire" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('campfire')">
+                            <div >
+                                <span>Campfire</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-snow">
+                        <a href="javascript:playSound('snow')">                        
+                            <div> 
+                                <span>Snow</span><br> 
+                                <img src="./assets/images/snow.svg" alt="snow">                      
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pause-snow" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('snow')">
+                            <div >
+                                <span>Snow</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-forest">
+                        <a href="javascript:playSound('forest')">                                                
+                            <div> 
+                                <span>Forest</span><br> 
+                                <img src="./assets/images/forest.svg" alt="forest">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pause-forest" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('forest')">
+                            <div >
+                                <span>Forest</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-birds">
+                        <a href="javascript:playSound('birds')">                      
+                            <div> 
+                                <span>Birds</span><br> 
+                                <img src="./assets/images/birds.svg" alt="birds">
+                            </div>
+                        </a>  
+                    </li>
+                    <li class="pause-birds" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('birds')">
+                            <div >
+                                <span>Birds</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-wind">
+                        <a href="javascript:playSound('wind')">
+                            <div> 
+                                <span>Wind</span><br> 
+                                <img src="./assets/images/wind.svg" alt="wind">
+                            </div>
+                        </a> 
+                    </li>
+                    <li class="pause-wind" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('wind')">
+                            <div >
+                                <span>Wind</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-leaves">
+                        <a href="javascript:playSound('leaves')">            
+                            <div> 
+                                <span>Leaves</span><br> 
+                                <img src="./assets/images/leaves.svg" alt="leaves" class="leaves-sound">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pause-leaves" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('leaves')">
+                            <div >
+                                <span>Leaves</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-cafe">
+                        <a href="javascript:playSound('cafe')">                       
+                            <div> 
+                                <span>Cafe</span><br> 
+                                <img src="./assets/images/cafe.svg" alt="cafe">
+                            </div>
+                        </a> 
+                    </li>
+                    <li class="pause-cafe" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('cafe')">
+                            <div >
+                                <span>Cafe</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-night">
+                        <a href="javascript:playSound('night')">                       
+                            <div> 
+                                <span>Night</span><br> 
+                                <img src="./assets/images/night.svg" alt="night">
+                            </div>
+                        </a>    
+                    </li>
+                    <li class="pause-night" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('night')">
+                            <div >
+                                <span>Night</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                    <li class="play-library">
+                        <a href="javascript:playSound('library')">                    
+                            <div> 
+                                <span>Library</span><br> 
+                                <img src="./assets/images/library.svg" alt="library">
+                            </div>
+                        </a>    
+                    </li>
+                    <li class="pause-library" style="display:none; box-shadow: rgba(0, 0, 0, 0.15)2.95px 2.95px 3.6px;">
+                        <a href="javascript:pauseSound('library')">
+                            <div >
+                                <span>Library</span><br>
+                                <i class='bx bx-pause-circle bx-spin' style=" margin: 24px 10px; font-size: 62px;"></i>  
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Chat" class="w3-container w3-border tab" style="display:none">
+            <div class="content">
+                <div class="counter"></div>
+                <input id="seconds" type="number" placeholder="Seconds...">
+                <div class="buttons">
+                    <button class="btn start" id="start" value="1" onclick="check(this)">Start</button>
+                    <button class="btn start" id="continue" value="1" onclick="check(this)">Continue</button>
+                    <button class="btn stop" id="stop" value="0" onclick="check(this)">Stop</button>
+                    <button class="btn start" id="submit" onclick="subm()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Todo" class="w3-container w3-border tab todo-tab" style="display:none">
+            <!-- <h2>Todo</h2> -->
+            <form>
+                <input type="text" class="todo-input" style="outline: none;">
+                <button class="todo-button" type="submit">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+            </form>
+            <div class="todo-container">
+                <ul class="todo-list"></ul>
+            </div>  
+        </div>
+
+        <div class="navbar-div">
+            <div class="navbar">
+                <ul>
+                <li class="active">
+                    <a href="#" class="w3-bar-item w3-button tablink" onclick="openTab(event,'Home')">
+                    <i class='bx bx-home icon'></i>
+                    <i class='bx bxs-home activeIcon'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="w3-bar-item w3-button tablink" onclick="openTab(event,'Chat')">
+                        <i class='bx bx-message-square-dots icon'></i>            
+                        <i class='bx bxs-message-square-dots activeIcon'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="w3-bar-item w3-button tablink" onclick="openTab(event,'Todo')">
+                        <i class='bx bx-check-square' ></i>            
+                        <i class='bx bxs-check-square activeIcon'></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="birds" src="./assets/sounds/birds.mp3" preload="auto" loop></audio>
+    <audio id="cafe" src="./assets/sounds/cafe.mp3" preload="auto" loop></audio>
+    <audio id="campfire" src="./assets/sounds/campfire.mp3" preload="auto" loop></audio>
+    <audio id="forest" src="./assets/sounds/forest.mp3" preload="auto" loop></audio>
+    <audio id="leaves" src="./assets/sounds/leaves.mp3" preload="auto" loop></audio>
+    <audio id="library" src="./assets/sounds/library.mp3" preload="auto" loop></audio>
+    <audio id="night" src="./assets/sounds/night.mp3" preload="auto" loop></audio>
+    <audio id="rain" src="./assets/sounds/rain.mp3" preload="auto" loop></audio>
+    <audio id="snow" src="./assets/sounds/snow.mp3" preload="auto" loop></audio>
+    <audio id="wind" src="./assets/sounds/wind.mp3" preload="auto" loop></audio>
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/sounds.js"></script>
+    </body>
+</html>

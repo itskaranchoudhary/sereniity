@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;  
+  }
+  body{
+    background-color: #b8c4bb;
+  }
+
+  .navbar-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar{
+    height: 96px;
+    width: 360px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    vertical-align: bottom;
+    margin-bottom: 14px;
+  }
+  .navbar ul{
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    vertical-align: bottom;
+  }
+  .navbar ul li{
+    position: relative;
+    list-style-type: none;
+  }
+  .navbar ul li a{
+    margin-bottom: 14px;
+    position: relative;
+    height: 96px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .navbar ul li a i{
+    position: absolute;
+    font-size: 38px;
+    color: #000000;
+  }
+  ul li a i.activeIcon{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s ease;
+    transition-delay: 0.2s;
+  }
+  .navbar ul li.active a i{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .navbar ul .indicator{
+    position: absolute;
+    bottom: -19px;
+    left: 34px;
+    height: 36px;
+    width: 25px;
+    background: #7d2ae8;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  ul .indicator::before{
+    content: "";
+    position: absolute;
+    left: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: #fff;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 0 #7d2ae8;
+  }
+  ul .indicator::after{
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: #fff;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 0 #7d2ae8;
+  }
+
+  .todo-tab{
+    color: white;
+  }
+  header {
+    font-size: 1.5rem;
+  }
+  header,
+  form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Todo > form > input{
+    width: 520px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  #Todo > form > button{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  form input,
+  form button {
+    padding: 0.6rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+  }
+  form button {
+    color: #663f46;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form button:hover {
+    background: #663f46;
+    color: white;
+  }
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-list {
+    min-width: 40%;
+    list-style: none;
+  }
+  .todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .todo li {
+    flex: 1;
+  }
+  .trash-btn,
+  .complete-btn {
+    background: #5f77b3;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .complete-btn {
+    background: rgb(73, 204, 96);
+  }
+  .todo-item {
+    padding: 0rem 0.5rem;
+  }
+  
+  .fa-trash {
+    pointer-events: none;
+  }
+  .fa-check {
+    pointer-events: none;
+  }
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  .fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+  }
+  .select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    color: #5f77b3;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: #5f77b3;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .select:hover::after {
+    background-color: white;
+    color: #5f77b3;
+  }
+
+  .sounds-list{
+    text-align: center;
+    vertical-align: middle;
+    margin: 120px 160px;
+    margin-top: 30px;
+    display: inline-block;
+  }
+  .sounds-list li{
+    display: inline-block;
+    border-radius: 24px;
+    background-color: #e8f7ee;
+    height: 200px;
+    width: 200px;
+    padding:30px;
+    margin: 30px;
+  }
+    
+  #Home > div > ul > li> a{
+    text-decoration: none;
+    color: black;
+  }
+
+  #Home > div > ul > li > a > div > img{
+    height: 62px;
+    margin: 24px 10px;
+  }
+
+  #Home > div > ul > li > a > div > span{
+    font-size: 20px;
+  }
+
+  .title{
+    color: #0045d6;
+  }
+  
+  .content{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .btn{
+    padding: 0.8rem 1.7rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .start{
+    color: #1f3;
+  }
+  .stop{
+    color: #E00;
+  }
+  
+  #continue, .stop, #start{
+    display: none;
+  }
+  
+  #seconds{
+    width: 250px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #fff;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  #seconds::placeholder{
+    color: #ddd;
+  }
